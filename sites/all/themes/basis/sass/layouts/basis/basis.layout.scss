@@ -1,0 +1,79 @@
+/*******************************************************************************
+ * _layout.scss
+ *
+ * Styling of the "basis" layout.
+ ******************************************************************************/
+@import "susy";
+
+// Susy Variables
+
+// Set consistent vertical and horizontal spacing units.
+$vert-spacing-unit: 0;
+$horz-spacing-unit: 1em;
+
+// Define Susy grid variables mobile first.
+$total-columns: 4;
+$column-width: 4em;
+$gutter-width: $horz-spacing-unit;
+$grid-padding: 16px;
+
+$container-style: magic;
+$container-width: 1200px;
+
+// Susy Media Layouts @see http://susy.oddbird.net/guides/reference/#ref-media-layouts
+$tab: 50em 24; // At 44em use 12 columns.
+$desk: 70em 24; // At 70em use 24 columns.
+
+.l-top,
+.l-branding,
+.l-main,
+.l-footer {
+  @include container; // Define these elements as the grid containers.
+  // @include susy-grid-background; // Show the columns for debugging.
+  margin-bottom: $vert-spacing-unit;
+}
+
+.l-region--highlighted,
+.l-region--help {
+  margin-bottom: $vert-spacing-unit;
+}
+
+@include at-breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
+  .l-top,
+  .l-branding,
+  .l-main,
+  .l-footer {
+    @include set-container-width; // Reset only the container width (elements have already been declared as containers).
+    //@include susy-grid-background; // Show the columns for debugging.
+  }
+
+  .l-region--branding {
+    @include span-columns(12, 12); // Span 12 out of 12 columns.
+  }
+  .l-region--header{
+    @include span-columns(12, 12); // Span 12 out of 12 columns.
+  }
+  .l-region--navigation {
+    @include span-columns(6, 12); // Span 6 out of 12 columns.
+    clear: both;
+  }
+  
+  .l-logo {
+    @include span-columns(2, 24); // Span 2 out of 24 columns.
+  }
+  
+  .l-site-name {
+    @include span-columns(22 omega, 24); // Span the last (omega) 22 columns of 24.
+    float: left;
+  }
+}
+
+@include at-breakpoint($desk) {
+  .l-top,
+  .l-branding,
+  .l-main,
+  .l-footer {
+    @include set-container-width; // Reset only the container width (elements have already been declared as containers).
+    // @include susy-grid-background; // Show the columns for debugging.
+}  
+}

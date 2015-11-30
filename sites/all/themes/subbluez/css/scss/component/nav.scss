@@ -1,0 +1,74 @@
+/*-------------------------------------------*
+/* Menu Navigation
+/*-------------------------------------------*/
+#navigation {
+    padding-top: 21px;
+    #main-menu {
+        height: 29px;
+        width: 100%;
+        background-color: $color-primary;
+        > .menu {
+            > li {
+                display: inline-block;
+                float: left;
+                > a {
+                    height: 29px;
+                    width: 190px;
+                    line-height: 29px;
+                    color: $color-white;
+                    background-color: $color-primary;
+                    display: inline-block;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                &:hover {
+                    > a {
+                        background-color: $color-primary-hover;
+                    }
+                }
+                &.expanded {
+                    z-index: 10;
+                    position: relative;
+                    .menu {
+                        position: absolute;
+                        top: 29px;
+                        background-color: $color-neutral;
+                        box-shadow: 2px 2px 4px $color-text;
+                        overflow:hidden;
+                        display: none;
+//                        height:0;
+//                        -webkit-transition:height 200ms ease-in;
+//                        -moz-transition:height 200ms ease-in;
+//                        -o-transition:height 200ms ease-in;
+//                        transition:height 200ms ease-in;
+                        li {
+                            width: 190px;
+                            height: 29px;
+                            border-bottom: 1px dashed $color-text;
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            a {
+                                height: 29px;
+                                width: 190px;
+                                display: block;
+                                line-height: 29px;
+                                padding: 0px 24px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        > .menu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .menu {
+            li {
+                list-style: none;
+            }
+        }
+    }
+}

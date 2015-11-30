@@ -1,0 +1,47 @@
+/* Color variables */
+$color-white: #fff !default;
+$color-black: #333 !default;
+$color-default : whitesmoke !default;
+$color-primary : #ED2024 !default;
+$color-success : #5cb85c !default;
+$color-info : #5bc0de !default;
+$color-warning : #f0ad4e !default;
+$color-danger : #d9534f !default;
+$color-inverse : #3f4549 !default;
+$color-neutral : rgb(245, 245, 245) !default;
+$color-mainmenu : #5e6c7a !default;
+$color-darker: #000 !default;
+$brand-success: #5cb85c !default;
+$darkorange: #ff8c00 !default;
+$color-background: #fff !default;
+$color-halo-text: #fff !default;
+
+$color-default-hover : darken($color-default, 10%) !default;
+$color-primary-hover : darken($color-primary, 10%) !default;
+$color-success-hover : darken($color-success, 10%) !default;
+$color-info-hover : darken($color-info, 10%) !default;
+$color-warning-hover : darken($color-warning, 10%) !default;
+$color-danger-hover : darken($color-danger, 10%) !default;
+$color-inverse-hover : darken($color-inverse, 10%) !default;
+
+$color-text : #828282 !default;
+/*$color-border : #dce0e0 !default;*/
+$color-border: #fff !default;
+$color-link : #00AFE8;
+
+$color-location: gray !default;
+
+$color-slogan: #3E0D02;
+
+$widget-gutter-width: 12px !default;
+
+$sansFontFamily : 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$serifFontFamily : 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$arialFontFamily: Arial;
+
+$font-size-base : 14px !default;
+
+$padding-default : 10px !default;
+$margin-default : 10px !default;
+
+$wrapperWidth: 1000px;

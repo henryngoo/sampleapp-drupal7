@@ -1,0 +1,4 @@
+name = Basis
+description = Omega 4 starterkit from Friendly Machine.
+core = 7.x
+files[] = basis.profile
